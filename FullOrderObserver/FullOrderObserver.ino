@@ -60,7 +60,7 @@ void loop()
   vchat = ((A21-B_2*G[0])*timer)*ilhat+((A22-K2[1]-B_2*G[1])*timer+1)*vchat+K1[1]*timer*Vout;
 
   // Calculate Duty Cycle
-  Vos = (Vout - Vset);
+  Vos = (vchat - Vset);
   dd = (-G[0]*ilhat-G[1]*Vos)*255;
   Dd = DD + dd;
 
